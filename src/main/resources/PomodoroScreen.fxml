@@ -10,12 +10,12 @@
    <children>
       <Pane prefHeight="403.0" prefWidth="600.0" style="-fx-background-color: #ffe2d6;">
          <children>
-            <Label id="timer" layoutX="215.0" layoutY="69.0" text="00:00">
+            <Label fx:id="timer" layoutX="215.0" layoutY="69.0" text="00:00">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label id="title" layoutX="121.0" layoutY="14.0" text="Pomodoro Timer">
+            <Label fx:id="title" layoutX="121.0" layoutY="14.0" text="Pomodoro Timer">
                <font>
                   <Font size="48.0" />
                </font>
@@ -25,12 +25,12 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="187.0" layoutY="219.0" prefHeight="35.0" prefWidth="370.0" style="-fx-background-color: #FF91A4;" text="None">
+            <Label fx:id="current" layoutX="187.0" layoutY="219.0" prefHeight="35.0" prefWidth="370.0" style="-fx-background-color: #FF91A4;" text="None">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button id="complete-task" layoutX="229.0" layoutY="332.0" mnemonicParsing="false" style="-fx-background-color: #800800;" text="Complete Task" textFill="WHITE">
+            <Button fx:id="complete-task" layoutX="229.0" layoutY="332.0" mnemonicParsing="false" style="-fx-background-color: #800800;" text="Complete Task" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label id="next" layoutX="187.0" layoutY="174.0" prefHeight="35.0" prefWidth="370.0" style="-fx-opacity: 0.5;" text="None">
+            <Label fx:id="next" layoutX="187.0" layoutY="174.0" prefHeight="35.0" prefWidth="370.0" style="-fx-opacity: 0.5;" text="None">
                <font>
                   <Font size="24.0" />
                </font>
@@ -50,7 +50,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label id="previous" layoutX="187.0" layoutY="265.0" prefHeight="35.0" prefWidth="370.0" style="-fx-opacity: 0.5;" text="None">
+            <Label fx:id="previous" layoutX="187.0" layoutY="265.0" prefHeight="35.0" prefWidth="370.0" style="-fx-opacity: 0.5;" text="None">
                <font>
                   <Font size="24.0" />
                </font>
