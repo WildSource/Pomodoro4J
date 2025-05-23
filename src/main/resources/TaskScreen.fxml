@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="org.example.controllers.TaskController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane prefHeight="405.0" prefWidth="600.0" style="-fx-background-color: #ffe2d6;">
          <children>
@@ -17,13 +17,13 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button id="start-button" layoutX="220.0" layoutY="315.0" mnemonicParsing="false" style="-fx-background-color: #800800;" text="Start Pomodoro">
+            <Button fx:id="startButton" layoutX="220.0" layoutY="315.0" mnemonicParsing="false" style="-fx-background-color: #800800;" text="Start Pomodoro">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <TextField id="task-input" layoutX="74.0" layoutY="84.0" prefHeight="26.0" prefWidth="453.0" style="-fx-border-color: black; -fx-background-color: #fef6f2;" />
-            <ListView id="task-list" layoutX="74.0" layoutY="123.0" prefHeight="187.0" prefWidth="453.0" style="-fx-background-color: #fef6f2;" />
+            <TextField fx:id="taskInput" layoutX="74.0" layoutY="84.0" prefHeight="26.0" prefWidth="453.0" style="-fx-border-color: red; -fx-background-color: #fef6f2;" />
+            <ListView fx:id="taskList" layoutX="74.0" layoutY="123.0" prefHeight="187.0" prefWidth="453.0" style="-fx-background-color: #fef6f2;" />
          </children>
       </Pane>
    </children>
