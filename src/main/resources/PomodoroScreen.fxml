@@ -30,7 +30,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="complete-task" layoutX="229.0" layoutY="332.0" mnemonicParsing="false" style="-fx-background-color: #800800;" text="Complete Task" textFill="WHITE">
+            <Button fx:id="completeTask" layoutX="229.0" layoutY="310.0" mnemonicParsing="false" style="-fx-background-color: #800800;" text="Complete Task" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
