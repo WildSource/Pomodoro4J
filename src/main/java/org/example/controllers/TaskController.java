@@ -43,19 +43,27 @@ public class TaskController {
         });
 
         startButton.setOnAction(event -> {
-            Stage stage = (Stage) (
-                    ((Node) event.getSource())
-                            .getScene()
-                            .getWindow());
+            // Send data to next controller
+            PomodoroController pomodoroController = new PomodoroController();
+            pomodoroController.setTasks(tasks);
 
             Scene scene = null;
 
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("/PomodoroScreen.fxml"));
+                // Load scene in try catch in case fxml is not available
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/PomodoroScreen.fxml"));
+                loader.setController(pomodoroController);
+
+                Parent root = loader.load();
                 scene = new Scene(root);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+            Stage stage = (Stage) (
+                    ((Node) event.getSource())
+                            .getScene()
+                            .getWindow());
 
             stage.setTitle("Pomodoro For Java");
             stage.setScene(scene);
