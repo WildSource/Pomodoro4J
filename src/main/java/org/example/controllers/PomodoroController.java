@@ -1,19 +1,34 @@
 package org.example.controllers;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class PomodoroController {
     @FXML
-    private Label title;
+    Label title;
     @FXML
-    private Label timer;
+    Label timer;
     @FXML
-    private Label previous;
+    Label previous;
     @FXML
-    private Label next;
+    Label current;
     @FXML
-    private Button completeTask;
+    Label next;
+    @FXML
+    Button completeTask;
 
+    ObservableList<String> tasks;
+    int currentIndex = 0;
+
+    void setTasks(ObservableList<String> tasks) {
+        this.tasks = tasks;
+            }
+
+    @FXML
+    void initialize() {
+        current.setText(tasks.get(currentIndex));
+        next.setText(tasks.get(currentIndex + 1));
+    }
 }
